@@ -118,11 +118,25 @@ The absence of Event ID 7036 in the available System logs was observed but not e
 
 ## 6. Screenshots and Evidence
 
-The following evidence will be added:
+## 6. Screenshots and Evidence
 
-1. Print Spooler in the Stopped state.
-2. PowerShell diagnosis confirming the stopped service.
-3. Final PowerShell verification showing Running and Automatic.
+### 01 — Print Spooler Service Stopped
+
+The Print Spooler service was manually stopped to simulate a printing-related service failure.
+
+![Print Spooler Stopped](print%20spooler/01-spooler-stopped.png)
+
+### 02 — PowerShell Service Diagnosis
+
+PowerShell was used to confirm that the Print Spooler service was stopped.
+
+![PowerShell Diagnosis](print%20spooler/02-spooler-powershell-diagnosis.png)
+
+### 03 — Service Successfully Restored
+
+After executing `Start-Service -Name Spooler`, PowerShell confirmed that the service was Running with Automatic startup configuration.
+
+![Print Spooler Restored](print%20spooler/03-spooler-service-restored.png)
 
 ## 7. Technical Skills Demonstrated
 
